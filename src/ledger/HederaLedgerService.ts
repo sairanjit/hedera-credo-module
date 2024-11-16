@@ -1,8 +1,8 @@
 import { injectable } from '@credo-ts/core'
+import { HcsDid } from '@hashgraph/did-sdk-js'
+import { Client } from '@hashgraph/sdk'
 // biome-ignore lint/style/useImportType: <explanation>
 import { HederaModuleConfig } from '../HederaModuleConfig'
-import { Client } from '@hashgraph/sdk'
-import { HcsDid } from '@hashgraph/did-sdk-js'
 
 @injectable()
 export class HederaLedgerService {

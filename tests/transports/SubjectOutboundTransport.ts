@@ -1,8 +1,8 @@
+import type { Agent, Logger, OutboundPackage, OutboundTransport } from '@credo-ts/core'
 import type { SubjectMessage } from './SubjectInboundTransport'
-import type { OutboundPackage, OutboundTransport, Agent, Logger } from '@credo-ts/core'
 
-import { MessageReceiver, InjectionSymbols, CredoError } from '@credo-ts/core'
-import { takeUntil, Subject, take } from 'rxjs'
+import { CredoError, InjectionSymbols, MessageReceiver } from '@credo-ts/core'
+import { Subject, take, takeUntil } from 'rxjs'
 
 export class SubjectOutboundTransport implements OutboundTransport {
   private logger!: Logger
