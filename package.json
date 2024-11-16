@@ -1,0 +1,32 @@
+{
+  "name": "hedera-credo-module",
+  "main": "build/index",
+  "types": "build/index",
+  "version": "0.0.0",
+  "files": ["build"],
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/sairanjit/hedera-credo-module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sairanjit/hedera-credo-module"
+  },
+  "scripts": {
+    "clean": "rimraf -rf ./build",
+    "build": "pnpm clean && tsc",
+    "style": "pnpm biome check .",
+    "style:fix": "pnpm biome check . --write"
+  },
+  "dependencies": {
+    "@credo-ts/askar": "^0.5.13",
+    "@credo-ts/core": "^0.5.13"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@hyperledger/aries-askar-nodejs": "^0.2.3",
+    "rimraf": "^6.0.1",
+    "typescript": "~5.3.3"
+  }
+}
