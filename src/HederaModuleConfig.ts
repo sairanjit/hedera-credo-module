@@ -4,7 +4,7 @@ export interface HederaModuleConfigOptions {
 }
 
 export class HederaModuleConfig {
-  private options: HederaModuleConfigOptions
+  public readonly options: HederaModuleConfigOptions
 
   public constructor(options: HederaModuleConfigOptions) {
     this.options = options

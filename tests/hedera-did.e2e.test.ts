@@ -7,7 +7,7 @@ import { HederaDidResolver, HederaModule } from '../src'
 
 const logger = new ConsoleLogger(LogLevel.info)
 
-const did = 'did:hedera:testnet:zBWqsP9FwD5p3vvmgYoDoWsSiG6YYtkT8FxyZTLvQj3tV_0.0.5137238'
+const did = 'did:hedera:testnet:zGdjMu1hPkjbJXSPPp6RgTptnpYYM9uEkPeNbPhSkXTon_0.0.5139753'
 
 describe('Hedera Module did resolver', () => {
   let aliceAgent: Agent<{ askar: AskarModule; hedera: HederaModule; dids: DidsModule }>

@@ -14,13 +14,6 @@ export class HederaModule implements Module {
   }
 
   public register(dependencyManager: DependencyManager) {
-    // Warn about experimental module
-    dependencyManager
-      .resolve(AgentConfig)
-      .logger.warn(
-        "The 'hedera-credo-module' module is experimental and could have unexpected breaking changes. When using this module, make sure to use strict versions for all @credo-ts packages."
-      )
-
     // Register config
     dependencyManager.registerInstance(HederaModuleConfig, this.config)
 

@@ -30,6 +30,9 @@ importers:
       '@hyperledger/aries-askar-nodejs':
         specifier: ^0.2.3
         version: 0.2.3
+      '@hyperledger/aries-askar-shared':
+        specifier: ^0.2.3
+        version: 0.2.3
       '@types/jest':
         specifier: ^29.5.14
         version: 29.5.14

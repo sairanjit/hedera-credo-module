@@ -22,8 +22,15 @@ export class HederaDidResolver implements DidResolver {
     try {
       const didDoc = await ledgerService.resolve(did)
 
+      const didJson = didDoc.toJsonTree()
+
+      const updatedContextDidJson = {
+        ...didJson,
+        '@context': ['https://www.w3.org/ns/did/v1', 'https://w3id.org/security/suites/ed25519-2018/v1'],
+      }
+
       return {
-        didDocument: JsonTransformer.fromJSON(didDoc.toJsonTree(), DidDocument),
+        didDocument: JsonTransformer.fromJSON(updatedContextDidJson, DidDocument),
         didDocumentMetadata,
         didResolutionMetadata: {
           contentType: 'application/did+json',
