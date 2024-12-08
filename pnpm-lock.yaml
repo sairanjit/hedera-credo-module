@@ -16,7 +16,7 @@ importers:
         version: 0.5.13(expo@52.0.7(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react-native@0.76.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react@18.3.1))(react@18.3.1))(react-native@0.76.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react@18.3.1))(typescript@5.3.3)(web-streams-polyfill@3.3.3)
       '@hashgraph/did-sdk-js':
         specifier: github:Meeco/hedera-did-sdk-js#9f5a709ec98e2055de29f990cfe06eb090296b1b
-        version: https://codeload.github.com/Meeco/hedera-did-sdk-js/tar.gz/9f5a709ec98e2055de29f990cfe06eb090296b1b(expo@52.0.7(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react-native@0.76.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react@18.3.1))(react@18.3.1))
+        version: git+https://git@github.com:Meeco/hedera-did-sdk-js.git#9f5a709ec98e2055de29f990cfe06eb090296b1b(expo@52.0.7(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react-native@0.76.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react@18.3.1))(react@18.3.1))
       '@hashgraph/sdk':
         specifier: ^2.53.0
         version: 2.53.0(expo@52.0.7(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react-native@0.76.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react@18.3.1))(react@18.3.1))
@@ -1118,8 +1118,8 @@ packages:
       expo-random:
         optional: true
 
-  '@hashgraph/did-sdk-js@https://codeload.github.com/Meeco/hedera-did-sdk-js/tar.gz/9f5a709ec98e2055de29f990cfe06eb090296b1b':
-    resolution: {tarball: https://codeload.github.com/Meeco/hedera-did-sdk-js/tar.gz/9f5a709ec98e2055de29f990cfe06eb090296b1b}
+  '@hashgraph/did-sdk-js@git+https://git@github.com:Meeco/hedera-did-sdk-js.git#9f5a709ec98e2055de29f990cfe06eb090296b1b':
+    resolution: {commit: 9f5a709ec98e2055de29f990cfe06eb090296b1b, repo: git@github.com:Meeco/hedera-did-sdk-js.git, type: git}
     version: 1.0.0
     engines: {node: '>=16.13.1', npm: '>=8.1.2'}
 
@@ -1484,7 +1484,6 @@ packages:
 
   '@sphereon/kmp-mdl-mdoc@0.2.0-SNAPSHOT.22':
     resolution: {integrity: sha512-uAZZExVy+ug9JLircejWa5eLtAZ7bnBP6xb7DO2+86LRsHNLh2k2jMWJYxp+iWtGHTsh6RYsZl14ScQLvjiQ/A==}
-    bundledDependencies: []
 
   '@sphereon/pex-models@2.3.1':
     resolution: {integrity: sha512-SByU4cJ0XYA6VZQ/L6lsSiRcFtBPHbFioCeQ4GP7/W/jQ+PSBD7uK2oTnKQ9/0iEiMK/6JYqhKgLs4a9UX3UTQ==}
@@ -2195,8 +2194,8 @@ packages:
   cross-fetch@4.0.0:
     resolution: {integrity: sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g==}
 
-  cross-spawn@6.0.5:
-    resolution: {integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==}
+  cross-spawn@6.0.6:
+    resolution: {integrity: sha512-VqCUuhcd1iB+dsv8gxPttb5iZh/D0iubSP21g36KXdEuf6I5JiioesUVjpCdHV9MZRUfVFlvwtIUyPfxo5trtw==}
     engines: {node: '>=4.8'}
 
   cross-spawn@7.0.5:
@@ -6806,7 +6805,7 @@ snapshots:
     optionalDependencies:
       expo: 52.0.7(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react-native@0.76.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react@18.3.1))(react@18.3.1)
 
-  '@hashgraph/did-sdk-js@https://codeload.github.com/Meeco/hedera-did-sdk-js/tar.gz/9f5a709ec98e2055de29f990cfe06eb090296b1b(expo@52.0.7(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react-native@0.76.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react@18.3.1))(react@18.3.1))':
+  '@hashgraph/did-sdk-js@git+https://git@github.com:Meeco/hedera-did-sdk-js.git#9f5a709ec98e2055de29f990cfe06eb090296b1b(expo@52.0.7(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react-native@0.76.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react@18.3.1))(react@18.3.1))':
     dependencies:
       '@hashgraph/sdk': 2.53.0(expo@52.0.7(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react-native@0.76.2(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(react@18.3.1))(react@18.3.1))
       base58-js: 1.0.5
@@ -8374,7 +8373,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  cross-spawn@6.0.5:
+  cross-spawn@6.0.6:
     dependencies:
       nice-try: 1.0.5
       path-key: 2.0.1
@@ -8643,7 +8642,7 @@ snapshots:
 
   execa@1.0.0:
     dependencies:
-      cross-spawn: 6.0.5
+      cross-spawn: 6.0.6
       get-stream: 4.1.0
       is-stream: 1.1.0
       npm-run-path: 2.0.2
