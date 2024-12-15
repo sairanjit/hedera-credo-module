@@ -1,4 +1,4 @@
-import { injectable, type Buffer } from '@credo-ts/core'
+import { type Buffer, injectable } from '@credo-ts/core'
 import { HcsDid } from '@hashgraph/did-sdk-js'
 import { Client, PrivateKey, PublicKey } from '@hashgraph/sdk'
 // biome-ignore lint/style/useImportType: <explanation>
@@ -16,38 +16,12 @@ export class HederaLedgerService {
     this.client = client
   }
 
-  public async create(seed: Buffer, publicKey: Buffer) {
-    const privateKey = await PrivateKey.fromSeedED25519(seed)
+  public async create(seed: Buffer) {
+    const privateKey = await PrivateKey.fromBytes(seed)
 
     const hcsDid = new HcsDid({ privateKey, client: this.client })
 
-    const did = await hcsDid.register()
-
-    // TODO: Need to check the multibase encoding support form sdk
-    await did.addVerificationMethod({
-      controller: did.getIdentifier(),
-      id: `${did.getIdentifier()}#key-1`,
-      publicKey: PublicKey.fromBytes(publicKey),
-      type: 'Ed25519VerificationKey2018',
-    })
-
-    // Adding assertionMethod relationship
-    await did.addVerificationRelationship({
-      controller: did.getIdentifier(),
-      id: `${did.getIdentifier()}#key-1`,
-      publicKey: PublicKey.fromBytes(publicKey),
-      type: 'Ed25519VerificationKey2018',
-      relationshipType: 'assertionMethod',
-    })
-
-    // Adding authentication relationship
-    await did.addVerificationRelationship({
-      controller: did.getIdentifier(),
-      id: `${did.getIdentifier()}#key-1`,
-      publicKey: PublicKey.fromBytes(publicKey),
-      type: 'Ed25519VerificationKey2018',
-      relationshipType: 'authentication',
-    })
+    await hcsDid.register()
 
     return hcsDid
   }

@@ -33,9 +33,9 @@ export class HederaDidRegistrar implements DidRegistrar {
     try {
       const seedBuffer = TypedArrayEncoder.fromString(options.secret.seed)
 
-      const key = await agentContext.wallet.createKey({ keyType: KeyType.Ed25519, seed: seedBuffer })
+      await agentContext.wallet.createKey({ keyType: KeyType.Ed25519, privateKey: seedBuffer })
 
-      const hederaDid = await hederaLedgerService.create(seedBuffer, key.publicKey)
+      const hederaDid = await hederaLedgerService.create(seedBuffer)
 
       const did = await hederaDid.resolve()
 
